@@ -8,7 +8,7 @@ export const metadata = {
 
  
 export default function RootLayout({ children }) {
-  console.log(process.env.MONGODB_URI)
+  console.log(process.env.MONGODB_URI,process.env.NEXTAUTH_URL)
  return (
   <html lang='en'>
   <body>
