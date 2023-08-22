@@ -29,6 +29,7 @@ const JobCard = ({post}) => {
 	// };
 
 
+
 	return (
 		<>
 			<div

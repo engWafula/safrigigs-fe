@@ -16,7 +16,6 @@ function JobCardSmall ({post}) {
 		setVisible(!visible);
 	};
 
-	const isSm = useMediaQuery("only screen and (max-width : 700px)");
 
 	// const truncateText = (text, maxWords) => {
 	// 	const wordsArray = text.split(" ");

@@ -1,7 +1,5 @@
-import PromptCard from "./PromptCard";
 import Link from "next/link";
 const Profile = ({job}) => {
-  console.log(job,"specific")
 
   return (
     <section className='w-full items-center'>

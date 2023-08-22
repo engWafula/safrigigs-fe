@@ -6,8 +6,6 @@ import { useSearchParams } from "next/navigation";
 import Profile from "@components/Profile";
 
 const Job = ({ params }) => {
-  const searchParams = useSearchParams();
-  const userName = searchParams.get("name");
 
   const [data, setData] = useState();
   useEffect(() => {
@@ -23,7 +21,6 @@ const Job = ({ params }) => {
 
   return (
     <Profile
-      name={userName}
       desc="  Before applying, carefully review the job requirements and ensure that you meet the necessary qualifications and skills for the position."
       job={data}
     />

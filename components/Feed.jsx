@@ -11,6 +11,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 const PromptCardList = ({ data, loading }) => {
   const isSm = useMediaQuery("only screen and (max-width : 700px)");
+
+  
   return (
     		<div       className='w-full flex-center flex-col mb-20 mt-10'
         >
