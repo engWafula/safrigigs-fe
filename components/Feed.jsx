@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import JobCard from "./JobCard";
 import JobCardSmall from "./JobCardSmall";
@@ -10,16 +10,19 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 
 const PromptCardList = ({ data, loading }) => {
-  const isSm = useMediaQuery("only screen and (max-width : 700px)");
-
-  
   return (
-    		<div       className='w-full flex-center flex-col mb-20 mt-10'
-        >
-     {data?.map((post) => (
-      isSm?<JobCardSmall key={post._id} post={post}/>:<JobCard key={post._id} post={post}/>
-      ))} 
-    </div>
+    <div className='w-full flex-center flex-col mb-20 mt-10'>
+    {data?.map((post) => (
+      <React.Fragment key={post._id}>
+        {/* Render JobCardSmall for small screens */}
+        {window.innerWidth <= 700 ? (
+          <JobCardSmall post={post} />
+        ) : (
+          <JobCard post={post} />
+        )}
+      </React.Fragment>
+    ))}
+  </div>
     )
 };
 
@@ -122,15 +125,15 @@ console.log(pageNumber,'..;p0')
 			<InfiniteScroll
  dataLength={allPosts?.data?.length || 0} 
  				next={fetchData}
-				hasMore={true}
+				hasMore={hasMore}
         loader={
 					<h4 style={{ textAlign: "center", padding: "1rem" }}>
-						Loading...
+						{!hasMore? "Thats what  " : "Loading..."}
 					</h4>
 				}
 				endMessage={
 					<p style={{ textAlign: "center" }}>
-						Thats all we have for you
+						<b>Thats all we have for you</b>
 					</p>
 				}
 			>

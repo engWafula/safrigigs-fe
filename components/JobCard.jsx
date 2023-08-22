@@ -1,6 +1,3 @@
-"use client";
-
-
 import React from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { Button } from "antd";
@@ -27,7 +24,6 @@ const JobCard = ({post}) => {
 	// 		return text;
 	// 	}
 	// };
-
 
 
 	return (

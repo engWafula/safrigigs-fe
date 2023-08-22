@@ -30,7 +30,7 @@ function JobCardSmall ({post}) {
 		<Link href={`/job/${post._id}`} style={{ display: 'contents' }}>
 
 		<div
-			className=" shadow-3xl "
+			className="shadow-3xl"
 			style={{
                 width: "23rem",
 				display: "flex",
