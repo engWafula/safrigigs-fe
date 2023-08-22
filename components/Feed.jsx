@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React,{ useState, useEffect } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import JobCard from "./JobCard";
 import JobCardSmall from "./JobCardSmall";
@@ -11,7 +11,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 const PromptCardList = ({ data, loading }) => {
   return (
-    <div className='w-full flex-center flex-col mb-20 mt-10'>
+    <div className=' flex-center flex-col mb-20 mt-10'>
     {data?.map((post) => (
       <React.Fragment key={post._id}>
         {/* Render JobCardSmall for small screens */}
@@ -120,7 +120,7 @@ console.log(pageNumber,'..;p0')
       </form>
       </div>
       <div
-      className="mb-15"
+      className="mb-10"
 					>
 			<InfiniteScroll
  dataLength={allPosts?.data?.length || 0} 

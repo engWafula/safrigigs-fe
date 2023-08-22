@@ -1,6 +1,3 @@
-"use client";
-
-
 import React, { useState } from "react";
 import { BsBookmark, BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineEye } from "react-icons/ai";
@@ -30,9 +27,9 @@ function JobCardSmall ({post}) {
 		<Link href={`/job/${post._id}`} style={{ display: 'contents' }}>
 
 		<div
-			className="shadow-3xl"
+			className=" shadow-3xl "
 			style={{
-                width: "23rem",
+                width: "21rem",
 				display: "flex",
 				flexDirection: "column",
 				justifyContent: "space-between",
@@ -40,7 +37,7 @@ function JobCardSmall ({post}) {
 				borderRadius: "0.5rem",
 				boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)",
 				cursor: "pointer",
-				marginBottom: "3rem",
+				marginBottom: "2rem",
 				fontFamily: "Arial, sans-serif"
 			}}
 		>
@@ -103,16 +100,7 @@ function JobCardSmall ({post}) {
 						opacity: 0.5
 					}}
 				>
-					<span
-						style={{
-							fontSize: ".2rem",
-							lineBreak: "auto",
-							fontFamily: "Poppins",
-							letterSpacing: "2px"
-						}}
-					>
-				 {post.companyName}
-					</span>
+		
 					<BsBookmark
 						style={{
 							height: "20px",
