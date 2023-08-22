@@ -12,7 +12,7 @@ export const connectToDB = async () => {
 
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "promptive",
+      dbName: "GigSafari",
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })

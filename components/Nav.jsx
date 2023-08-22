@@ -18,7 +18,9 @@ const Nav = () => {
     })();
   }, []);
   return (
-    <nav className='flex-between w-full mb-16 pt-3'>
+    // <nav className='flex-between w-full mb-16 pt-3 sticky top-0 z-50'>
+      <nav className='flex-between w-full mb-16 pt-3 bg-opacity-90 backdrop-blur-lg p-4 sticky top-0  transition backdrop-filter backdrop-blur-lg z-50'>
+
       <Link href='/' className='flex gap-2 flex-center'>
         {/* <Image
           src='/assets/images/logo.svg'
@@ -27,7 +29,7 @@ const Nav = () => {
           height={30}
           className='object-contain'
         /> */}
-        <p className='logo_text'>Promptive</p>
+        <p className='logo_text'>GigSafari</p>
       </Link>
 
       {/* Desktop Navigation */}
