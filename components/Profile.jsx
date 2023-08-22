@@ -66,14 +66,16 @@ const Profile = ({job}) => {
   </Link>
 </div>
 <div className='flex justify-center mt-2 mb-10'>
+  {job?.link&&
   <a
-    href={job?.link}
+    href={`${job?.link}`}
     target='_blank'
     rel='noopener noreferrer'
     className='px-4 py-2 text-white bg-black rounded-md hover:bg-gray-800 transition duration-300'
   >
     Apply Now
   </a>
+  }
 </div>
 
     </section>

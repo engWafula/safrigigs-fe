@@ -120,15 +120,15 @@ console.log(pageNumber,'..;p0')
 			<InfiniteScroll
  dataLength={allPosts?.data?.length || 0} 
  				next={fetchData}
-				hasMore={hasMore}
+				hasMore={true}
         loader={
 					<h4 style={{ textAlign: "center", padding: "1rem" }}>
-						{!hasMore? "Thats what  " : "Loading..."}
+						Loading...
 					</h4>
 				}
 				endMessage={
 					<p style={{ textAlign: "center" }}>
-						<b>Thats all we have for you</b>
+						Thats all we have for you
 					</p>
 				}
 			>

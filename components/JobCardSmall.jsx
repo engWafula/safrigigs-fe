@@ -1,3 +1,6 @@
+"use client";
+
+
 import React, { useState } from "react";
 import { BsBookmark, BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineEye } from "react-icons/ai";
